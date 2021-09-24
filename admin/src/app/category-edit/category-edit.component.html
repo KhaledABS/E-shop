@@ -1,0 +1,29 @@
+<form class="clr-form clr-form-horizontal">
+    <div class="clr-form-control">
+      <label class="clr-control-label">Nom</label>
+      <div class="clr-control-container">
+        <div class="clr-input-wrapper">
+          <input type="text" class="clr-input" name="title" [(ngModel)] = "obj.title"/>
+        </div>
+      </div>
+    </div>
+    <div class="clr-form-control">
+        <label class="clr-control-label">Icone</label>
+        <div class="clr-control-container">
+          <div class="clr-input-wrapper">
+            <input type="text" class="clr-input" name="icon" [(ngModel)] = "obj.icon"/>
+          </div>
+        </div>
+      </div>
+      <div class="clr-form-control">
+        <label class="clr-control-label">Description</label>
+        <div class="clr-control-container">
+          <div class="clr-input-wrapper">
+            <input type="text" class="clr-input" name="description" [(ngModel)] = "obj.description"/>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <button class="btn btn-sm" type="submit" (click) = "onSubmit()">Enregistrer</button>
+  </form>

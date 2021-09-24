@@ -1,0 +1,38 @@
+<clr-datagrid>
+    <clr-dg-action-bar>
+      <div class="btn-group">
+        <button type="button" class="btn btn-sm btn-secondary" (click)="onAdd()">
+           Ajouter nouveau
+        </button>
+      </div>
+    </clr-dg-action-bar>
+      <clr-dg-column>Nom</clr-dg-column>
+      <clr-dg-column>Email</clr-dg-column>
+      <clr-dg-row *ngFor="let item of users">
+          <clr-dg-action-overflow>
+              <button class="action-item" (click)="onDelete(item.id)">Supprimer</button>
+            </clr-dg-action-overflow>
+        <clr-dg-cell>{{item.username}}</clr-dg-cell>
+        <clr-dg-cell>{{item.email}}</clr-dg-cell>
+        <clr-dg-row-detail *clrIfExpanded>
+          <table class="table table-vertical table-noborder">
+            <tbody>
+              <tr>
+                <th>Image</th>
+                <td>
+                  <img src="{{item.avatar}}"> 
+                </td>
+              </tr>
+              <tr>
+                <th>Contact</th>
+                <td>{{item.contact}}</td>
+              </tr>
+              <tr>
+                <th>Mot de passe</th>
+                <td>{{item.password}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </clr-dg-row-detail>
+      </clr-dg-row>
+    </clr-datagrid>

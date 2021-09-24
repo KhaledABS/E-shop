@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Mon Panier</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of cartItems; let i = index">
+      <ion-thumbnail slot="start">
+        <ion-img [src]="item.item.pictures"></ion-img>
+      </ion-thumbnail>
+      <div class="my-container-label">
+        <ion-label>{{ item.item.title }}</ion-label>
+        <div class="badge-container">
+          <ion-badge color="secondary">{{ item.qty }}</ion-badge><span>&nbsp; x {{ item.amount | currency }}</span>
+        </div>
+        <ion-button (click)="contact(item)" class="btn-cart" size="small">
+          <ion-icon slot="start" name="mail"></ion-icon>
+          Contacter vendeur
+        </ion-button>
+      </div>
+      <ion-buttons (click)="remove(i, item)" slot="end">
+        <ion-button color="danger">
+          <ion-icon name="remove-circle" slot="icon-only"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-button fill="outline" expand="block">
+      TOTAL : {{ total | currency }}
+    </ion-button>
+    <ion-button expand="block" (click)="commander()">
+      Commander
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

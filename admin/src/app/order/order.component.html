@@ -1,0 +1,28 @@
+<clr-datagrid>
+      <clr-dg-column>Nom d'utilisateur</clr-dg-column>
+      <clr-dg-column>Montant total</clr-dg-column>
+      <clr-dg-row *ngFor="let item of orders">
+        <clr-dg-cell>{{item.utilisateur.username}}</clr-dg-cell>
+        <clr-dg-cell>{{item.total}}</clr-dg-cell>
+        <clr-dg-row-detail *clrIfExpanded>
+            <table class="table table-compact">
+                <thead>
+                  <tr>
+                    <th class="left">Produit</th>
+                    <th>P.Unitaire</th>
+                    <th>Qté</th>
+                    <th class="right">Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor = "let element of item.orderDetails">
+                    <td class="left">{{element.article.title}}</td>
+                    <td>{{element.article.price}}</td>
+                    <td>{{element.qty}}</td>
+                    <td class="right">{{element.qty * element.article.price}}</td>
+                  </tr>
+                </tbody>
+              </table> 
+        </clr-dg-row-detail>
+      </clr-dg-row>
+    </clr-datagrid>

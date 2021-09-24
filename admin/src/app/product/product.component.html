@@ -1,0 +1,39 @@
+<clr-datagrid>
+  <clr-dg-action-bar>
+    <div class="btn-group">
+      <button type="button" class="btn btn-sm btn-secondary" (click)="onAdd()">
+         Ajouter nouveau
+      </button>
+    </div>
+  </clr-dg-action-bar>
+    <clr-dg-column>Nom</clr-dg-column>
+    <clr-dg-column>Prix</clr-dg-column>
+    <clr-dg-row *ngFor="let item of products">
+        <clr-dg-action-overflow>
+            <button class="action-item" (click)="onEdit(item.id)">Modifier</button>
+            <button class="action-item" (click)="onDelete(item.id)">Supprimer</button>
+          </clr-dg-action-overflow>
+      <clr-dg-cell>{{item.title}}</clr-dg-cell>
+      <clr-dg-cell>{{item.price}}</clr-dg-cell>
+      <clr-dg-row-detail *clrIfExpanded>
+        <table class="table table-vertical table-noborder">
+          <tbody>
+            <tr>
+              <th>Image</th>
+              <td>
+                <img src="{{item.pictures}}"> 
+              </td>
+            </tr>
+            <tr>
+              <th>Category</th>
+              <td>{{item.category.title}}</td>
+            </tr>
+            <tr>
+              <th>Description</th>
+              <td>{{item.description}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </clr-dg-row-detail>
+    </clr-dg-row>
+  </clr-datagrid>

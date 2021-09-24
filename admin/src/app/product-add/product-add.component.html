@@ -1,0 +1,47 @@
+<form class="clr-form clr-form-horizontal">
+    <div class="clr-form-control">
+        <label  class="clr-control-label">Nom</label>
+        <div class="clr-control-container">
+          <div class="clr-input-wrapper">
+            <input type="text"  class="clr-input" name="nom" [(ngModel)] = "obj.title">
+          </div>
+        </div>
+      </div>
+      <div class="clr-form-control">
+        <label  class="clr-control-label">Prix</label>
+        <div class="clr-control-container">
+          <div class="clr-input-wrapper">
+            <input type="number"  class="clr-input" name="price" [(ngModel)] = "obj.price">
+          </div>
+        </div>
+      </div>
+      <div class="clr-form-control">
+        <label class="clr-control-label">Categorie</label>
+        <div class="clr-control-container">
+          <div class="clr-select-wrapper">
+            <select [(ngModel)]="obj.categoryId" name="categoryId">
+              <option *ngFor = "let item of categs" [ngValue]="item.id">{{item.title}}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="clr-form-control">
+        <label  class="clr-control-label">Url de l'image</label>
+        <div class="clr-control-container">
+          <div class="clr-input-wrapper">
+            <input type="text"  class="clr-input" name="pictures" [(ngModel)] = "obj.pictures">
+          </div>
+        </div>
+      </div>
+      <div class="clr-form-control">
+        <label class="clr-control-label">Description</label>
+        <div class="clr-control-container">
+          <div class="clr-textarea-wrapper">
+            <textarea class="clr-textarea" name="description" [(ngModel)] = "obj.description"></textarea>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <button class="btn btn-sm" type="submit" (click) = "onSubmit()">Enregistrer</button>
+  </form>

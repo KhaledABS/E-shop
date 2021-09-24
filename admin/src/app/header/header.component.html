@@ -1,0 +1,28 @@
+<div >
+    <header class="header-6">
+      <div class="branding">
+        <a href="/orders">
+          <span class="title">Admin</span>
+        </a>
+      </div>
+    </header>
+    <nav class="subnav">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="orders" [ngClass]="{'active':activeRoute === 1}" (click) = 'activeRoute = 1' >Commandes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="products" [ngClass]="{'active':activeRoute === 2}" (click) = 'activeRoute = 2'>Produits</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="category" [ngClass]="{'active':activeRoute === 3}" (click) = 'activeRoute = 3'>Categories</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="users" [ngClass]="{'active':activeRoute === 4}" (click) = 'activeRoute = 4'>Utilisateurs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="messages" [ngClass]="{'active':activeRoute === 5}" (click) = 'activeRoute = 5'>Messages</a>
+        </li>
+      </ul>
+    </nav>
+  </div>

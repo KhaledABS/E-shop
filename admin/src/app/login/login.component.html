@@ -1,0 +1,23 @@
+<div class="login-wrapper">
+    <form class="login" #formObject="ngForm">
+        <section class="title">
+            <h3 class="welcome">Bienvenue sur</h3>
+            <h2>votre interface ADMIN</h2>
+
+        </section>
+        <div class="login-group">
+
+            <input clrInput class="username" type="text" id="login_username" [(ngModel)]="user.email"
+                placeholder="Email" name="email" email required>
+            <clr-password-container>
+                <input type="password" name="password" clrPassword [(ngModel)]="user.password"
+                    placeholder="Mot de passe" required />
+            </clr-password-container>
+            <div class="error active" *ngIf="show">
+                Email ou Mot de passe invalide !
+            </div>
+            <button type="submit" class="btn btn-primary" (click)="login()"
+                [disabled]="formObject.invalid">Connexion</button>
+        </div>
+    </form>
+</div>

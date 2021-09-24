@@ -1,0 +1,11 @@
+<clr-datagrid>
+    <clr-dg-column>Titre</clr-dg-column>
+    <clr-dg-column>Message</clr-dg-column>
+    <clr-dg-column>Date de creation</clr-dg-column>
+  
+    <clr-dg-row *ngFor="let item of messages">
+      <clr-dg-cell>{{item.title}}</clr-dg-cell>
+      <clr-dg-cell>{{item.content}}</clr-dg-cell>
+      <clr-dg-cell>{{item.createdAt | date}}</clr-dg-cell>
+    </clr-dg-row>
+  </clr-datagrid>

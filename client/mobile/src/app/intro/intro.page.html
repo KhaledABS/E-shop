@@ -1,0 +1,57 @@
+<ion-content >
+  
+  
+    <ion-slide>
+      <h2>Welcome </h2>
+      
+<!--debut-->
+      <div class="ion-padding container">
+        
+      <div class="form-container">
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input name="email" [(ngModel)] = "user.email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="password" name="password" [(ngModel)] = "user.password"></ion-input>
+          <ion-icon name="eye" slot="end"></ion-icon>
+        </ion-item>
+  <br>
+        </div>
+        <div>
+        <div class="sign-up">
+          <h3>
+          Don't have an account? 
+          <ion-button color="dark" fill="clear" routerLink="/signup" routerDirection="forward">Sign up
+          </ion-button>
+        </h3>
+        </div>
+      </div>
+    </div>
+    <ion-button (click)="login()" expand="block"> 
+      Log In
+    </ion-button> 
+<!--fin-->
+
+
+      <br>
+      <ion-button (click)="loginWithFacebook()" expand="block">
+        <ion-icon slot="start" name="logo-facebook"></ion-icon>  
+        Login with Facebook
+      </ion-button> 
+
+      
+      <!--google-->
+      <!--
+      <ion-button (click)="loginWithFacebook()" expand="block">
+        <ion-icon slot="start" name="logo-google"></ion-icon>  
+        Login with google
+      </ion-button>   
+    -->
+    
+      
+      
+    </ion-slide>
+  
+</ion-content>

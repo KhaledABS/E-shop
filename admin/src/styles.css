@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+.table {
+    padding: 0 30px 30px 30px;
+}
+
+th {
+    width: 100px;
+    padding: 12px !important;
+}
+
+img {
+    max-width: 50vw;
+}

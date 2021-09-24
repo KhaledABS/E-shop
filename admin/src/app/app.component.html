@@ -1,0 +1,14 @@
+<clr-main-container class="main-container">
+  <app-header *ngIf="!showLogin">
+  </app-header>
+  <div class="content-container">
+      <div class="content-area">
+          <router-outlet></router-outlet>
+      </div>
+
+      <!-- <clr-vertical-nav [clrVerticalNavCollapsible]="true" [clrVerticalNavCollapsed]="false" 
+      [clr-nav-level]="1" *ngIf="!showLogin">
+          <app-sidenav ></app-sidenav> -->
+      <!-- </clr-vertical-nav> -->
+  </div>
+</clr-main-container>

@@ -1,0 +1,21 @@
+<clr-datagrid>
+    <clr-dg-action-bar>
+        <div class="btn-group">
+          <button type="button" class="btn btn-sm btn-secondary" (click)="onAdd()">
+             Ajouter nouveau
+          </button>
+        </div>
+      </clr-dg-action-bar>
+    <clr-dg-column>Nom</clr-dg-column>
+    <clr-dg-column>Icone</clr-dg-column>
+    <clr-dg-column>Description</clr-dg-column>
+    <clr-dg-row *ngFor="let item of categories">
+        <clr-dg-action-overflow>
+            <button class="action-item" (click)="onEdit(item.id)">Modifier</button>
+            <button class="action-item" (click)="onDelete(item.id)">Supprimer</button>
+        </clr-dg-action-overflow>
+        <clr-dg-cell>{{item.title}}</clr-dg-cell>
+        <clr-dg-cell>{{item.icon}}</clr-dg-cell>
+        <clr-dg-cell>{{item.description}}</clr-dg-cell>
+    </clr-dg-row>
+</clr-datagrid>

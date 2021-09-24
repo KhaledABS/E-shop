@@ -1,0 +1,37 @@
+<form class="clr-form clr-form-horizontal">
+    <div class="clr-form-control">
+        <label class="clr-control-label">Nom</label>
+        <div class="clr-control-container">
+            <div class="clr-input-wrapper">
+                <input type="text" class="clr-input" name="username" [(ngModel)]="obj.username" />
+            </div>
+        </div>
+    </div>
+    <div class="clr-form-control">
+        <label class="clr-control-label">Email</label>
+        <div class="clr-control-container">
+            <div class="clr-input-wrapper">
+                <input type="text" class="clr-input" name="email" [(ngModel)]="obj.email" />
+            </div>
+        </div>
+    </div>
+    <div class="clr-form-control">
+        <label class="clr-control-label">Mot de passe</label>
+        <div class="clr-control-container">
+            <div class="clr-input-wrapper">
+                <input type="text" class="clr-input" name="password" [(ngModel)]="obj.password" />
+            </div>
+        </div>
+    </div>
+    <div class="clr-form-control">
+        <label class="clr-control-label">Contact</label>
+        <div class="clr-control-container">
+            <div class="clr-input-wrapper">
+                <input type="text" class="clr-input" name="contact" [(ngModel)]="obj.contact" />
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <button class="btn btn-sm" type="submit" (click)="onSubmit()">Enregistrer</button>
+</form>
